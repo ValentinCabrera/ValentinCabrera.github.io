@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contador</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: rgb(255, 0, 0); height: 100%; width: 100vw">
+      <form
+        method="POST"
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+        "
+      >
+        {% csrf_token %}
+        <button
+          type="submit"
+          name="up"
+          style="
+            height: 50%;
+            width: 100%;
+            border: 30px black solid;
+            font-size: 300px;
+          "
+        >
+          +
+        </button>
+        <button
+          type="submit"
+          name="down"
+          style="
+            height: 50%;
+            width: 100%;
+            border: 30px black solid;
+            font-size: 300px;
+          "
+        >
+          -
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
